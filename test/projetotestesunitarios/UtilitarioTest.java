@@ -74,5 +74,17 @@ public class UtilitarioTest {
         assertEquals(2000, u.calculaPreco(1000, 2), 0.0);
     }
     
-    
+    @Test
+    public void testValidaData() {
+        assertFalse(u.validaData(0,2,2019));
+        assertFalse(u.validaData(29,2,2019));
+        assertTrue(u.validaData(28,2,2019));
+        assertTrue(u.validaData(29,2,2020));
+        assertFalse(u.validaData(31,6,2019));
+        assertFalse(u.validaData(35,12,2019));
+        assertFalse(u.validaData(0,-5,-100));
+        
+        
+
+    }
 }
