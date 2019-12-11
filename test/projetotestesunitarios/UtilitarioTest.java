@@ -87,4 +87,33 @@ public class UtilitarioTest {
         
 
     }
+
+    /**
+     * Test of calculaComissao method, of class Utilitario.
+     */
+    @Test
+    public void testCalculaComissao() {
+       assertEquals(225, u.calculaComissao(1500), 0.0);
+       assertEquals(300, u.calculaComissao(1999), 0.3);
+       assertEquals(2500, u.calculaComissao(10000), 0.0);
+       
+    }
+
+    /**
+     * Test of numeroNegativo method, of class Utilitario.
+     */
+    @Test
+    public void testNumeroNegativo() {
+         assertTrue(u.numeroNegativo(-5));
+        
+    }
+
+    /**
+     * Test of modulo method, of class Utilitario.
+     */
+    @Test
+    public void testModulo() {
+        assertEquals(25, u.modulo(-25));
+       
+    }
 }
